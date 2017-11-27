@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='{% static "css/custom.css"%}' rel="stylesheet" >
+    <link href='{% static "css/bootstrap.css"%}' rel="stylesheet" >
+    <title>Login</title>
+</head>
+<body>
+ <form method="post">
+        {% csrf_token %}
+        Username:<input type="text" name ="username" placeholder="Your Username" value=""><br><br>
+        <p id="username_para"></p><br>
+        Password:<input type="password" name="password" placeholder="Your password"><br><br>
+        <p id="password_para"></p><br>
+        <input type="submit" value="Login"> <button type="button"><a href="/signup">Sign Up</a> </button>
+ </form>
+
+ <button class="democlass" onclick="myFunct();">Click Me method 1</button>
+
+ <button class="democlass" id="btn">Click Me method 2</button>
+
+
+<p><b>{{ error_msg }}</b></p>
+
+ <script src='{% static "js/custom.js"%}'></script>
+    <script src='{% static "js/jquery-3.2.1.js"%}'></script>
+    <script src='{% static "js/bootstrap.js"%}'></script>
+</body>
+</html>
